@@ -101,7 +101,7 @@ export const FuroInputBase = (superClass) => {
       // input changes for checkboxes
       this._FBPAddWireHook("--inputCheckbox", (e) => {
         if (this.field && !this._displayOnly) {
-          this.field.set(e.checked);
+            this.field.value = e.value;
         }
         this.value = e.checked;
       });
