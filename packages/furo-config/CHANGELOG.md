@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.23](https://github.com/veith/FuroBaseComponents/compare/@furo/config@0.16.22...@furo/config@0.16.23) (2019-07-30)
+
+**Note:** Version bump only for package @furo/config
+
+
+
+
+
+## [0.16.22](https://github.com/veith/FuroBaseComponents/compare/@furo/config@0.16.21...@furo/config@0.16.22) (2019-07-30)
+
+**Note:** Version bump only for package @furo/config
+
+
+
+
+
+## [0.16.21](https://github.com/veith/FuroBaseComponents/compare/@furo/config@0.16.20...@furo/config@0.16.21) (2019-07-28)
+
+
+### Bug Fixes
+
+* imports ([890bf1e](https://github.com/veith/FuroBaseComponents/commit/890bf1e))
+* imports ([a51ec93](https://github.com/veith/FuroBaseComponents/commit/a51ec93))
+
+
+
+
+
 ## [0.16.20](https://github.com/veith/FuroBaseComponents/compare/@furo/config@0.16.19...@furo/config@0.16.20) (2019-07-16)
 
 **Note:** Version bump only for package @furo/config

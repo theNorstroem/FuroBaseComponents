@@ -5,7 +5,7 @@ import {FBP} from "@furo/fbp";
 /**
  * `furo-vertical-scroller`
  *
- * ```
+ * ```html
  * <furo-vertical-scroller>
  *   <your-content></your-content>
  * </furo-vertical-scroller>
@@ -14,7 +14,7 @@ import {FBP} from "@furo/fbp";
  *
  * @summary vertical scroll
  * @customElement
- * @demo demo/furo-vertical-scroller.html
+ * @demo demo-furo-vertical-scroller
  * @appliesMixin FBP
  */
 class FuroVerticalScroller extends FBP(LitElement) {

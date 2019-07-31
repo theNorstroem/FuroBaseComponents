@@ -1,24 +1,26 @@
 {
   "entrypoint": "index.html",
-  "shell": "_doc/main-app.js",
+  "shell": "_page/furo-shell.js",
   "fragments": [
-    "_doc/*.html"
+
   ],
   "sources": [
     "_assets/**/*",
-    "custom/**/*",
-    "_doc/**/*",
     "coverage/**/*",
-    "node_modules/@furo/input/**/*"
+    "_page/markdown/**/*",
+    "_page/images/**/*",
+    "_page/assets/**/*"
   ],
   "extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/*.js",
-    "node_modules/@polymer/iron-component-page/iron-component-page.js"
+    "node_modules/@polymer/iron-component-page/iron-component-page.js",
+    "node_modules/@furo/**/analysis.json",
+    "node_modules/@furo/**/CHANGELOG.md"
   ],
   "builds": [
     {
-      "preset": "es6-unbundled"
+      "preset": "es6-bundled"
     }
   ],
   "moduleResolution": "node",

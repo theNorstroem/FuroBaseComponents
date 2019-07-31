@@ -3,6 +3,80 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.46.0](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.45.5...@furo/data@0.46.0) (2019-07-30)
+
+
+### Features
+
+* furo-component-page ([37c9078](https://github.com/veith/FuroBaseComponents/commit/37c9078))
+
+
+
+
+
+## [0.45.5](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.45.4...@furo/data@0.45.5) (2019-07-30)
+
+**Note:** Version bump only for package @furo/data
+
+
+
+
+
+## [0.45.4](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.45.3...@furo/data@0.45.4) (2019-07-28)
+
+**Note:** Version bump only for package @furo/data
+
+
+
+
+
+## [0.45.3](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.45.2...@furo/data@0.45.3) (2019-07-28)
+
+**Note:** Version bump only for package @furo/data
+
+
+
+
+
+## [0.45.2](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.45.1...@furo/data@0.45.2) (2019-07-25)
+
+**Note:** Version bump only for package @furo/data
+
+
+
+
+
+## [0.45.1](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.45.0...@furo/data@0.45.1) (2019-07-22)
+
+
+### Bug Fixes
+
+* this.field.set ([352ec23](https://github.com/veith/FuroBaseComponents/commit/352ec23))
+
+
+
+
+
+# [0.45.0](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.44.1...@furo/data@0.45.0) (2019-07-19)
+
+
+### Features
+
+* Spec type spec init ([0a9b4ce](https://github.com/veith/FuroBaseComponents/commit/0a9b4ce))
+* Spec type spec init ([147aba0](https://github.com/veith/FuroBaseComponents/commit/147aba0))
+
+
+
+
+
+## [0.44.1](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.44.0...@furo/data@0.44.1) (2019-07-18)
+
+**Note:** Version bump only for package @furo/data
+
+
+
+
+
 # [0.44.0](https://github.com/veith/FuroBaseComponents/compare/@furo/data@0.43.0...@furo/data@0.44.0) (2019-07-18)
 
 

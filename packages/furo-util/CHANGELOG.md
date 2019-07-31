@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.8.1...@furo/util@0.9.0) (2019-07-30)
+
+
+### Features
+
+* furo-component-page ([37c9078](https://github.com/veith/FuroBaseComponents/commit/37c9078))
+
+
+
+
+
+## [0.8.1](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.8.0...@furo/util@0.8.1) (2019-07-30)
+
+**Note:** Version bump only for package @furo/util
+
+
+
+
+
+# [0.8.0](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.7.4...@furo/util@0.8.0) (2019-07-28)
+
+
+### Features
+
+* switch from commonmark to markdown-it ([bf80c48](https://github.com/veith/FuroBaseComponents/commit/bf80c48))
+
+
+
+
+
+## [0.7.4](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.7.3...@furo/util@0.7.4) (2019-07-28)
+
+
+### Bug Fixes
+
+* imports ([a51ec93](https://github.com/veith/FuroBaseComponents/commit/a51ec93))
+
+
+
+
+
+## [0.7.3](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.7.2...@furo/util@0.7.3) (2019-07-28)
+
+
+### Bug Fixes
+
+* graph calculation is faster then the svg, timeout given for label length calc ([c68993d](https://github.com/veith/FuroBaseComponents/commit/c68993d))
+
+
+
+
+
+## [0.7.2](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.7.1...@furo/util@0.7.2) (2019-07-25)
+
+**Note:** Version bump only for package @furo/util
+
+
+
+
+
+## [0.7.1](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.7.0...@furo/util@0.7.1) (2019-07-22)
+
+**Note:** Version bump only for package @furo/util
+
+
+
+
+
+# [0.7.0](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.6.0...@furo/util@0.7.0) (2019-07-18)
+
+
+### Features
+
+* ordered docs ([c48cac4](https://github.com/veith/FuroBaseComponents/commit/c48cac4))
+
+
+
+
+
 # [0.6.0](https://github.com/veith/FuroBaseComponents/compare/@furo/util@0.5.0...@furo/util@0.6.0) (2019-07-18)
 
 

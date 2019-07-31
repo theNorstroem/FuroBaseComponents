@@ -1,17 +1,19 @@
 import {LitElement, html, css} from 'lit-element';
 import {Theme} from "@furo/framework/theme"
-import 'commonmark/dist/commonmark.js';
+import "markdown-it/dist/markdown-it.js"
+
 import 'prismjs/prism.js';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
 
 
 /**
  * `furo-markdown`
- * todo Describe your element
+ *  Renders given md data with parseMarkdown or loads a md file with `mdsrc="source.md"`
  *
- * @summary todo shortdescription
+ *
+ * @summary renders md data
  * @customElement
- * @demo demo/furo-markdown.html
+ * @demo demo-furo-markdown
  * @appliesMixin FBP
  */
 class FuroMarkdown extends (LitElement) {
@@ -19,8 +21,7 @@ class FuroMarkdown extends (LitElement) {
 
   constructor() {
     super();
-    this.__reader = new commonmark.Parser();
-    this.__writer = new commonmark.HtmlRenderer({safe: true});
+
     this.markdownRendered = undefined;
   }
 
@@ -31,6 +32,10 @@ class FuroMarkdown extends (LitElement) {
    */
   static get properties() {
     return {
+      /**
+       * allow unsafe md. (writing html, components,...)
+       */
+      unsafe: {type: Boolean},
       /**
        * source of the md
        */
@@ -44,9 +49,8 @@ class FuroMarkdown extends (LitElement) {
 
 
   set mdsrc(src) {
-    this.fetchMd(src).then(markdown => {
-      this.markdown = markdown;
-    }).catch(err => err);
+    this.fetchMd(src);
+
   }
 
 
@@ -62,7 +66,9 @@ class FuroMarkdown extends (LitElement) {
    * @return {Promise<string | never>}
    */
   fetchMd(src) {
-    return fetch(src).then(res => res.text()).then(markdown => markdown);
+    fetch(src).then(res => res.text()).then(markdown => {
+      this.markdown = markdown;
+    });
   }
 
   /**
@@ -81,7 +87,14 @@ class FuroMarkdown extends (LitElement) {
    * @return {TemplateResult | TemplateResult}
    */
   _parseMarkdown(markdown) {
-    return html`${unsafeHTML(this.__writer.render(this.__reader.parse(markdown)))}`;
+    let md = window.markdownit({
+      html: this.unsafe,
+      linkify: true,
+      typographer: true
+    });
+
+
+    return html`${unsafeHTML(md.render(markdown))}`;
   }
 
   updated() {
@@ -110,7 +123,30 @@ class FuroMarkdown extends (LitElement) {
             max-width: 100%;
         }
 
-        
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 3.5rem;
+            letter-spacing: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: 0.0125em;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.87);
+        }
+
+        blockquote {
+            border-left: 3px solid var(--blockquote);
+            margin-left: 0;
+            padding-left: var(--spacing);
+        }
+
         /**
      * prism.js default theme for JavaScript, CSS and HTML
      * Based on dabblet (http://dabblet.com)
@@ -162,7 +198,7 @@ class FuroMarkdown extends (LitElement) {
         /* Code blocks */
         pre[class*="language-"] {
             padding: 1em;
-            margin: .5em 0;
+            margin: 0;
             overflow: auto;
         }
 

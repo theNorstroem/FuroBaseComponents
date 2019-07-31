@@ -14,29 +14,6 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 469,
-              "column": 4
-            },
-            "end": {
-              "line": 471,
-              "column": 5
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "readOnly": true
-            }
-          },
-          "inheritedFrom": "UpdatingElement"
-        },
-        {
-          "name": "_hasRequestedUpdate",
-          "type": "?",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "file": "../../../lit-element/lib/updating-element.js",
-            "start": {
               "line": 472,
               "column": 4
             },
@@ -53,10 +30,10 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "hasUpdated",
+          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
-          "privacy": "public",
+          "privacy": "protected",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
@@ -76,18 +53,41 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "updateComplete",
-          "type": "Promise",
-          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update. This getter can be implemented to\nawait additional state. For example, it is sometimes useful to await a\nrendered element before fulfilling this Promise. To do this, first await\n`super.updateComplete` then any subsequent state.",
+          "name": "hasUpdated",
+          "type": "?",
+          "description": "",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 542,
+              "line": 478,
               "column": 4
             },
             "end": {
-              "line": 544,
+              "line": 480,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "readOnly": true
+            }
+          },
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
+          "name": "updateComplete",
+          "type": "Promise",
+          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update.\n\nTo await additional asynchronous work, override the `_getUpdateComplete`\nmethod. For example, it is sometimes useful to await a rendered element\nbefore fulfilling this Promise. To do this, first await\n`super._getUpdateComplete()`, then any subsequent state.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 547,
+              "column": 4
+            },
+            "end": {
+              "line": 549,
               "column": 5
             }
           },
@@ -107,11 +107,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 91,
+              "line": 93,
               "column": 4
             },
             "end": {
-              "line": 101,
+              "line": 103,
               "column": 5
             }
           },
@@ -129,11 +129,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 278,
+              "line": 281,
               "column": 4
             },
             "end": {
-              "line": 292,
+              "line": 295,
               "column": 5
             }
           },
@@ -151,11 +151,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 296,
+              "line": 299,
               "column": 4
             },
             "end": {
-              "line": 302,
+              "line": 305,
               "column": 5
             }
           },
@@ -173,11 +173,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 144,
+              "line": 146,
               "column": 4
             },
             "end": {
-              "line": 151,
+              "line": 153,
               "column": 5
             }
           },
@@ -195,11 +195,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 319,
+              "line": 322,
               "column": 4
             },
             "end": {
-              "line": 320,
+              "line": 323,
               "column": 5
             }
           },
@@ -217,11 +217,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 324,
+              "line": 327,
               "column": 4
             },
             "end": {
-              "line": 328,
+              "line": 331,
               "column": 5
             }
           },
@@ -249,11 +249,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 329,
+              "line": 332,
               "column": 4
             },
             "end": {
-              "line": 356,
+              "line": 359,
               "column": 5
             }
           },
@@ -282,11 +282,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 357,
+              "line": 360,
               "column": 4
             },
             "end": {
-              "line": 375,
+              "line": 378,
               "column": 5
             }
           },
@@ -311,11 +311,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 381,
+              "line": 384,
               "column": 4
             },
             "end": {
-              "line": 411,
+              "line": 414,
               "column": 5
             }
           },
@@ -340,11 +340,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 425,
+              "line": 428,
               "column": 4
             },
             "end": {
-              "line": 428,
+              "line": 431,
               "column": 5
             }
           },
@@ -372,11 +372,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 432,
+              "line": 435,
               "column": 4
             },
             "end": {
-              "line": 468,
+              "line": 471,
               "column": 5
             }
           },
@@ -391,11 +391,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 494,
+              "line": 497,
               "column": 4
             },
             "end": {
-              "line": 524,
+              "line": 527,
               "column": 5
             }
           },
@@ -413,11 +413,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 525,
+              "line": 528,
               "column": 4
             },
             "end": {
-              "line": 528,
+              "line": 531,
               "column": 5
             }
           },
@@ -429,17 +429,36 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
+          "name": "_getUpdateComplete",
+          "description": "Override point for the `updateComplete` promise.\n\nIt is not safe to override the `updateComplete` getter directly due to a\nlimitation in TypeScript which means it is not possible to call a\nsuperclass getter (e.g. `super.updateComplete.then(...)`) when the target\nlanguage is ES5 (https://github.com/microsoft/TypeScript/issues/338).\nThis method should be overridden instead. For example:\n\n  class MyElement extends LitElement {\n    async _getUpdateComplete() {\n      await super._getUpdateComplete();\n      await this._myChild.updateComplete;\n    }\n  }",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 566,
+              "column": 4
+            },
+            "end": {
+              "line": 568,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
           "name": "shouldUpdate",
           "description": "Controls whether or not `update` should be called when the element requests\nan update. By default, this method always returns `true`, but this can be\ncustomized to control when to update.\n\n* @param _changedProperties Map of changed properties with old values",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 552,
+              "line": 576,
               "column": 4
             },
             "end": {
-              "line": 554,
+              "line": 578,
               "column": 5
             }
           },
@@ -458,11 +477,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 158,
+              "line": 160,
               "column": 4
             },
             "end": {
-              "line": 176,
+              "line": 178,
               "column": 5
             }
           },
@@ -484,11 +503,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 581,
+              "line": 605,
               "column": 4
             },
             "end": {
-              "line": 582,
+              "line": 606,
               "column": 5
             }
           },
@@ -510,11 +529,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 592,
+              "line": 616,
               "column": 4
             },
             "end": {
-              "line": 593,
+              "line": 617,
               "column": 5
             }
           },
@@ -536,11 +555,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 109,
+              "line": 111,
               "column": 4
             },
             "end": {
-              "line": 111,
+              "line": 113,
               "column": 5
             }
           },
@@ -559,11 +578,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 121,
+              "line": 123,
               "column": 4
             },
             "end": {
-              "line": 143,
+              "line": 145,
               "column": 5
             }
           },
@@ -603,11 +622,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 116,
+              "line": 124,
               "column": 4
             },
             "end": {
-              "line": 126,
+              "line": 134,
               "column": 5
             }
           },
@@ -625,11 +644,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 134,
+              "line": 142,
               "column": 4
             },
             "end": {
-              "line": 164,
+              "line": 170,
               "column": 5
             }
           },
@@ -659,7 +678,7 @@
               "column": 4
             },
             "end": {
-              "line": 55,
+              "line": 57,
               "column": 5
             }
           },
@@ -677,11 +696,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 210,
+              "line": 212,
               "column": 4
             },
             "end": {
-              "line": 217,
+              "line": 219,
               "column": 5
             }
           },
@@ -703,11 +722,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 224,
+              "line": 226,
               "column": 4
             },
             "end": {
-              "line": 226,
+              "line": 228,
               "column": 5
             }
           },
@@ -733,11 +752,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 233,
+              "line": 235,
               "column": 4
             },
             "end": {
-              "line": 238,
+              "line": 240,
               "column": 5
             }
           },
@@ -759,11 +778,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 247,
+              "line": 249,
               "column": 4
             },
             "end": {
-              "line": 256,
+              "line": 258,
               "column": 5
             }
           },
@@ -785,11 +804,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 57,
+              "line": 59,
               "column": 4
             },
             "end": {
-              "line": 85,
+              "line": 87,
               "column": 5
             }
           },
@@ -800,7 +819,7 @@
       ],
       "demos": [
         {
-          "url": "demo/furo-vertical-flex.html",
+          "url": "demo-furo-vertical-flex",
           "description": ""
         }
       ],
@@ -843,29 +862,6 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 469,
-              "column": 4
-            },
-            "end": {
-              "line": 471,
-              "column": 5
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "readOnly": true
-            }
-          },
-          "inheritedFrom": "UpdatingElement"
-        },
-        {
-          "name": "_hasRequestedUpdate",
-          "type": "?",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "file": "../../../lit-element/lib/updating-element.js",
-            "start": {
               "line": 472,
               "column": 4
             },
@@ -882,10 +878,10 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "hasUpdated",
+          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
-          "privacy": "public",
+          "privacy": "protected",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
@@ -905,18 +901,41 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "updateComplete",
-          "type": "Promise",
-          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update. This getter can be implemented to\nawait additional state. For example, it is sometimes useful to await a\nrendered element before fulfilling this Promise. To do this, first await\n`super.updateComplete` then any subsequent state.",
+          "name": "hasUpdated",
+          "type": "?",
+          "description": "",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 542,
+              "line": 478,
               "column": 4
             },
             "end": {
-              "line": 544,
+              "line": 480,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "readOnly": true
+            }
+          },
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
+          "name": "updateComplete",
+          "type": "Promise",
+          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update.\n\nTo await additional asynchronous work, override the `_getUpdateComplete`\nmethod. For example, it is sometimes useful to await a rendered element\nbefore fulfilling this Promise. To do this, first await\n`super._getUpdateComplete()`, then any subsequent state.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 547,
+              "column": 4
+            },
+            "end": {
+              "line": 549,
               "column": 5
             }
           },
@@ -936,11 +955,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 91,
+              "line": 93,
               "column": 4
             },
             "end": {
-              "line": 101,
+              "line": 103,
               "column": 5
             }
           },
@@ -958,11 +977,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 278,
+              "line": 281,
               "column": 4
             },
             "end": {
-              "line": 292,
+              "line": 295,
               "column": 5
             }
           },
@@ -980,11 +999,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 296,
+              "line": 299,
               "column": 4
             },
             "end": {
-              "line": 302,
+              "line": 305,
               "column": 5
             }
           },
@@ -1002,11 +1021,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 144,
+              "line": 146,
               "column": 4
             },
             "end": {
-              "line": 151,
+              "line": 153,
               "column": 5
             }
           },
@@ -1024,11 +1043,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 319,
+              "line": 322,
               "column": 4
             },
             "end": {
-              "line": 320,
+              "line": 323,
               "column": 5
             }
           },
@@ -1046,11 +1065,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 324,
+              "line": 327,
               "column": 4
             },
             "end": {
-              "line": 328,
+              "line": 331,
               "column": 5
             }
           },
@@ -1078,11 +1097,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 329,
+              "line": 332,
               "column": 4
             },
             "end": {
-              "line": 356,
+              "line": 359,
               "column": 5
             }
           },
@@ -1111,11 +1130,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 357,
+              "line": 360,
               "column": 4
             },
             "end": {
-              "line": 375,
+              "line": 378,
               "column": 5
             }
           },
@@ -1140,11 +1159,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 381,
+              "line": 384,
               "column": 4
             },
             "end": {
-              "line": 411,
+              "line": 414,
               "column": 5
             }
           },
@@ -1169,11 +1188,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 425,
+              "line": 428,
               "column": 4
             },
             "end": {
-              "line": 428,
+              "line": 431,
               "column": 5
             }
           },
@@ -1201,11 +1220,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 432,
+              "line": 435,
               "column": 4
             },
             "end": {
-              "line": 468,
+              "line": 471,
               "column": 5
             }
           },
@@ -1220,11 +1239,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 494,
+              "line": 497,
               "column": 4
             },
             "end": {
-              "line": 524,
+              "line": 527,
               "column": 5
             }
           },
@@ -1242,11 +1261,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 525,
+              "line": 528,
               "column": 4
             },
             "end": {
-              "line": 528,
+              "line": 531,
               "column": 5
             }
           },
@@ -1258,17 +1277,36 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
+          "name": "_getUpdateComplete",
+          "description": "Override point for the `updateComplete` promise.\n\nIt is not safe to override the `updateComplete` getter directly due to a\nlimitation in TypeScript which means it is not possible to call a\nsuperclass getter (e.g. `super.updateComplete.then(...)`) when the target\nlanguage is ES5 (https://github.com/microsoft/TypeScript/issues/338).\nThis method should be overridden instead. For example:\n\n  class MyElement extends LitElement {\n    async _getUpdateComplete() {\n      await super._getUpdateComplete();\n      await this._myChild.updateComplete;\n    }\n  }",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 566,
+              "column": 4
+            },
+            "end": {
+              "line": 568,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
           "name": "shouldUpdate",
           "description": "Controls whether or not `update` should be called when the element requests\nan update. By default, this method always returns `true`, but this can be\ncustomized to control when to update.\n\n* @param _changedProperties Map of changed properties with old values",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 552,
+              "line": 576,
               "column": 4
             },
             "end": {
-              "line": 554,
+              "line": 578,
               "column": 5
             }
           },
@@ -1287,11 +1325,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 158,
+              "line": 160,
               "column": 4
             },
             "end": {
-              "line": 176,
+              "line": 178,
               "column": 5
             }
           },
@@ -1313,11 +1351,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 581,
+              "line": 605,
               "column": 4
             },
             "end": {
-              "line": 582,
+              "line": 606,
               "column": 5
             }
           },
@@ -1339,11 +1377,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 592,
+              "line": 616,
               "column": 4
             },
             "end": {
-              "line": 593,
+              "line": 617,
               "column": 5
             }
           },
@@ -1365,11 +1403,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 109,
+              "line": 111,
               "column": 4
             },
             "end": {
-              "line": 111,
+              "line": 113,
               "column": 5
             }
           },
@@ -1388,11 +1426,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 121,
+              "line": 123,
               "column": 4
             },
             "end": {
-              "line": 143,
+              "line": 145,
               "column": 5
             }
           },
@@ -1432,11 +1470,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 116,
+              "line": 124,
               "column": 4
             },
             "end": {
-              "line": 126,
+              "line": 134,
               "column": 5
             }
           },
@@ -1454,11 +1492,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 134,
+              "line": 142,
               "column": 4
             },
             "end": {
-              "line": 164,
+              "line": 170,
               "column": 5
             }
           },
@@ -1488,7 +1526,7 @@
               "column": 4
             },
             "end": {
-              "line": 55,
+              "line": 57,
               "column": 5
             }
           },
@@ -1506,11 +1544,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 210,
+              "line": 212,
               "column": 4
             },
             "end": {
-              "line": 217,
+              "line": 219,
               "column": 5
             }
           },
@@ -1532,11 +1570,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 224,
+              "line": 226,
               "column": 4
             },
             "end": {
-              "line": 226,
+              "line": 228,
               "column": 5
             }
           },
@@ -1562,11 +1600,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 233,
+              "line": 235,
               "column": 4
             },
             "end": {
-              "line": 238,
+              "line": 240,
               "column": 5
             }
           },
@@ -1588,11 +1626,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 247,
+              "line": 249,
               "column": 4
             },
             "end": {
-              "line": 256,
+              "line": 258,
               "column": 5
             }
           },
@@ -1614,11 +1652,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 57,
+              "line": 59,
               "column": 4
             },
             "end": {
-              "line": 85,
+              "line": 87,
               "column": 5
             }
           },
@@ -1629,7 +1667,7 @@
       ],
       "demos": [
         {
-          "url": "demo/furo-horizontal-flex.html",
+          "url": "demo-furo-horizontal-flex",
           "description": ""
         }
       ],
@@ -1660,11 +1698,425 @@
       ]
     },
     {
-      "description": "`furo-vertical-scroller`\n\n```\n<furo-vertical-scroller>\n  <your-content></your-content>\n</furo-vertical-scroller>\n```",
+      "description": "`furo-vertical-scroller`\n\n```html\n<furo-vertical-scroller>\n  <your-content></your-content>\n</furo-vertical-scroller>\n```",
       "summary": "vertical scroll",
       "path": "packages/furo-layout/furo-vertical-scroller.js",
       "properties": [],
       "methods": [
+        {
+          "name": "_attachDom",
+          "description": "für Polymer",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 48,
+              "column": 8
+            },
+            "end": {
+              "line": 51,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "firstUpdated",
+          "description": "for lit elements",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 54,
+              "column": 8
+            },
+            "end": {
+              "line": 57,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "changedProperties"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTriggerWire",
+          "description": "Triggers a wire",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 65,
+              "column": 8
+            },
+            "end": {
+              "line": 108,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire like --buttonClicked"
+            },
+            {
+              "name": "detailData",
+              "description": "(*) data to pass"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPAddWireHook",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 118,
+              "column": 8
+            },
+            "end": {
+              "line": 135,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire"
+            },
+            {
+              "name": "cb",
+              "description": "(function) Callback function cb(detailData)"
+            },
+            {
+              "name": "before"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTraceWires",
+          "description": "Log all triggered wires for this component. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPTraceWires()`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 144,
+              "column": 8
+            },
+            "end": {
+              "line": 166,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPDebug",
+          "description": "Get information for the triggered wire. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPDebug('--dataReceived')`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 176,
+              "column": 8
+            },
+            "end": {
+              "line": 200,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "openDebugger",
+              "description": "opens the debugger console, so you can inspect your component."
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__toCamelCase",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 202,
+              "column": 8
+            },
+            "end": {
+              "line": 206,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "str"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_appendFBP",
+          "description": "parses the dom for flowbased programming tags",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 213,
+              "column": 8
+            },
+            "end": {
+              "line": 493,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom",
+              "description": "dom node"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__fbpReady",
+          "description": "Livecycle method\nThis method is called, when the wires are ready",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 500,
+              "column": 8
+            },
+            "end": {
+              "line": 502,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__enqueueTrigger",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 503,
+              "column": 8
+            },
+            "end": {
+              "line": 505,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "detailData"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__resolveWireAndPath",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 507,
+              "column": 8
+            },
+            "end": {
+              "line": 515,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "w"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "disconnectedCallback",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 517,
+              "column": 8
+            },
+            "end": {
+              "line": 531,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathGet",
+          "description": "Reads a value from a path.  If any sub-property in the path is `undefined`,\nthis method returns `undefined` (will never throw.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 542,
+              "column": 8
+            },
+            "end": {
+              "line": 555,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to read"
+            }
+          ],
+          "return": {
+            "type": "*",
+            "desc": "Value at path, or `undefined` if the path could not be\n fully dereferenced."
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathSet",
+          "description": "Sets a value to a path.  If any sub-property in the path is `undefined`,\nthis method will no-op.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 566,
+              "column": 8
+            },
+            "end": {
+              "line": 588,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to set"
+            },
+            {
+              "name": "value",
+              "type": "*",
+              "description": "Value to set to path"
+            }
+          ],
+          "return": {
+            "type": "(string | undefined)",
+            "desc": "The normalized version of the input path"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_split",
+          "description": "Splits a path into an array of property names. Accepts either arrays\nof path parts or strings.\n\nExample:\n\n```\nsplit(['foo.bar', 0, 'baz'])  // ['foo', 'bar', '0', 'baz']\nsplit('foo.bar.0.baz')        // ['foo', 'bar', '0', 'baz']\n```",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 606,
+              "column": 8
+            },
+            "end": {
+              "line": 608,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Input path"
+            }
+          ],
+          "return": {
+            "type": "!Array.<string>",
+            "desc": "Array of path parts"
+          },
+          "inheritedFrom": "FBP"
+        },
         {
           "name": "render",
           "description": "",
@@ -1689,7 +2141,7 @@
       "staticMethods": [],
       "demos": [
         {
-          "url": "demo/furo-vertical-scroller.html",
+          "url": "demo-furo-vertical-scroller",
           "description": ""
         }
       ],
@@ -1748,6 +2200,420 @@
       ],
       "methods": [
         {
+          "name": "_attachDom",
+          "description": "für Polymer",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 48,
+              "column": 8
+            },
+            "end": {
+              "line": 51,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "firstUpdated",
+          "description": "for lit elements",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 54,
+              "column": 8
+            },
+            "end": {
+              "line": 57,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "changedProperties"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTriggerWire",
+          "description": "Triggers a wire",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 65,
+              "column": 8
+            },
+            "end": {
+              "line": 108,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire like --buttonClicked"
+            },
+            {
+              "name": "detailData",
+              "description": "(*) data to pass"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPAddWireHook",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 118,
+              "column": 8
+            },
+            "end": {
+              "line": 135,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire"
+            },
+            {
+              "name": "cb",
+              "description": "(function) Callback function cb(detailData)"
+            },
+            {
+              "name": "before"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTraceWires",
+          "description": "Log all triggered wires for this component. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPTraceWires()`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 144,
+              "column": 8
+            },
+            "end": {
+              "line": 166,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPDebug",
+          "description": "Get information for the triggered wire. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPDebug('--dataReceived')`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 176,
+              "column": 8
+            },
+            "end": {
+              "line": 200,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "openDebugger",
+              "description": "opens the debugger console, so you can inspect your component."
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__toCamelCase",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 202,
+              "column": 8
+            },
+            "end": {
+              "line": 206,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "str"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_appendFBP",
+          "description": "parses the dom for flowbased programming tags",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 213,
+              "column": 8
+            },
+            "end": {
+              "line": 493,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom",
+              "description": "dom node"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__fbpReady",
+          "description": "Livecycle method\nThis method is called, when the wires are ready",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 500,
+              "column": 8
+            },
+            "end": {
+              "line": 502,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__enqueueTrigger",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 503,
+              "column": 8
+            },
+            "end": {
+              "line": 505,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "detailData"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__resolveWireAndPath",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 507,
+              "column": 8
+            },
+            "end": {
+              "line": 515,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "w"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "disconnectedCallback",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 517,
+              "column": 8
+            },
+            "end": {
+              "line": 531,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathGet",
+          "description": "Reads a value from a path.  If any sub-property in the path is `undefined`,\nthis method returns `undefined` (will never throw.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 542,
+              "column": 8
+            },
+            "end": {
+              "line": 555,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to read"
+            }
+          ],
+          "return": {
+            "type": "*",
+            "desc": "Value at path, or `undefined` if the path could not be\n fully dereferenced."
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathSet",
+          "description": "Sets a value to a path.  If any sub-property in the path is `undefined`,\nthis method will no-op.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 566,
+              "column": 8
+            },
+            "end": {
+              "line": 588,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to set"
+            },
+            {
+              "name": "value",
+              "type": "*",
+              "description": "Value to set to path"
+            }
+          ],
+          "return": {
+            "type": "(string | undefined)",
+            "desc": "The normalized version of the input path"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_split",
+          "description": "Splits a path into an array of property names. Accepts either arrays\nof path parts or strings.\n\nExample:\n\n```\nsplit(['foo.bar', 0, 'baz'])  // ['foo', 'bar', '0', 'baz']\nsplit('foo.bar.0.baz')        // ['foo', 'bar', '0', 'baz']\n```",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 606,
+              "column": 8
+            },
+            "end": {
+              "line": 608,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Input path"
+            }
+          ],
+          "return": {
+            "type": "!Array.<string>",
+            "desc": "Array of path parts"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
           "name": "render",
           "description": "",
           "privacy": "private",
@@ -1771,7 +2637,7 @@
       "staticMethods": [],
       "demos": [
         {
-          "url": "demo/furo-split-view.html",
+          "url": "demo-furo-split-view",
           "description": ""
         }
       ],
@@ -1819,35 +2685,12 @@
       ]
     },
     {
-      "description": "`furo-empty-spacer`",
-      "summary": "",
+      "description": "`furo-empty-spacer` Takes the place in furo-horizontal-flex or a furo-vertical-flex.\n\n<furo-demo-snippet source>\n<template>\n <furo-horizontal-flex>\n  <div>small</div>\n  <!-- A furo-empty-spacer will fill the available space. -->\n  <furo-empty-spacer style=\"border: 1px dashed lightgray;\"></furo-empty-spacer>\n  <div>small</div>\n </furo-horizontal-flex>\n</template>\n</furo-demo-snippet>",
+      "summary": "fill the space in a furo-xxxx-flex",
       "path": "packages/furo-layout/furo-empty-spacer.js",
       "properties": [
         {
           "name": "_hasConnected",
-          "type": "?",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "file": "../../../lit-element/lib/updating-element.js",
-            "start": {
-              "line": 469,
-              "column": 4
-            },
-            "end": {
-              "line": 471,
-              "column": 5
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "readOnly": true
-            }
-          },
-          "inheritedFrom": "UpdatingElement"
-        },
-        {
-          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
           "privacy": "protected",
@@ -1870,10 +2713,10 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "hasUpdated",
+          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
-          "privacy": "public",
+          "privacy": "protected",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
@@ -1893,18 +2736,41 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "updateComplete",
-          "type": "Promise",
-          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update. This getter can be implemented to\nawait additional state. For example, it is sometimes useful to await a\nrendered element before fulfilling this Promise. To do this, first await\n`super.updateComplete` then any subsequent state.",
+          "name": "hasUpdated",
+          "type": "?",
+          "description": "",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 542,
+              "line": 478,
               "column": 4
             },
             "end": {
-              "line": 544,
+              "line": 480,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "readOnly": true
+            }
+          },
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
+          "name": "updateComplete",
+          "type": "Promise",
+          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update.\n\nTo await additional asynchronous work, override the `_getUpdateComplete`\nmethod. For example, it is sometimes useful to await a rendered element\nbefore fulfilling this Promise. To do this, first await\n`super._getUpdateComplete()`, then any subsequent state.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 547,
+              "column": 4
+            },
+            "end": {
+              "line": 549,
               "column": 5
             }
           },
@@ -1922,11 +2788,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 24,
+              "line": 36,
               "column": 6
             },
             "end": {
-              "line": 27,
+              "line": 39,
               "column": 7
             }
           },
@@ -1943,11 +2809,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 31,
+              "line": 43,
               "column": 6
             },
             "end": {
-              "line": 34,
+              "line": 46,
               "column": 7
             }
           },
@@ -1966,11 +2832,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 91,
+              "line": 93,
               "column": 4
             },
             "end": {
-              "line": 101,
+              "line": 103,
               "column": 5
             }
           },
@@ -1988,11 +2854,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 278,
+              "line": 281,
               "column": 4
             },
             "end": {
-              "line": 292,
+              "line": 295,
               "column": 5
             }
           },
@@ -2010,11 +2876,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 296,
+              "line": 299,
               "column": 4
             },
             "end": {
-              "line": 302,
+              "line": 305,
               "column": 5
             }
           },
@@ -2032,11 +2898,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 144,
+              "line": 146,
               "column": 4
             },
             "end": {
-              "line": 151,
+              "line": 153,
               "column": 5
             }
           },
@@ -2054,11 +2920,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 319,
+              "line": 322,
               "column": 4
             },
             "end": {
-              "line": 320,
+              "line": 323,
               "column": 5
             }
           },
@@ -2076,11 +2942,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 324,
+              "line": 327,
               "column": 4
             },
             "end": {
-              "line": 328,
+              "line": 331,
               "column": 5
             }
           },
@@ -2108,11 +2974,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 329,
+              "line": 332,
               "column": 4
             },
             "end": {
-              "line": 356,
+              "line": 359,
               "column": 5
             }
           },
@@ -2141,11 +3007,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 357,
+              "line": 360,
               "column": 4
             },
             "end": {
-              "line": 375,
+              "line": 378,
               "column": 5
             }
           },
@@ -2170,11 +3036,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 381,
+              "line": 384,
               "column": 4
             },
             "end": {
-              "line": 411,
+              "line": 414,
               "column": 5
             }
           },
@@ -2199,11 +3065,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 425,
+              "line": 428,
               "column": 4
             },
             "end": {
-              "line": 428,
+              "line": 431,
               "column": 5
             }
           },
@@ -2231,11 +3097,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 432,
+              "line": 435,
               "column": 4
             },
             "end": {
-              "line": 468,
+              "line": 471,
               "column": 5
             }
           },
@@ -2250,11 +3116,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 494,
+              "line": 497,
               "column": 4
             },
             "end": {
-              "line": 524,
+              "line": 527,
               "column": 5
             }
           },
@@ -2272,11 +3138,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 525,
+              "line": 528,
               "column": 4
             },
             "end": {
-              "line": 528,
+              "line": 531,
               "column": 5
             }
           },
@@ -2288,17 +3154,36 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
+          "name": "_getUpdateComplete",
+          "description": "Override point for the `updateComplete` promise.\n\nIt is not safe to override the `updateComplete` getter directly due to a\nlimitation in TypeScript which means it is not possible to call a\nsuperclass getter (e.g. `super.updateComplete.then(...)`) when the target\nlanguage is ES5 (https://github.com/microsoft/TypeScript/issues/338).\nThis method should be overridden instead. For example:\n\n  class MyElement extends LitElement {\n    async _getUpdateComplete() {\n      await super._getUpdateComplete();\n      await this._myChild.updateComplete;\n    }\n  }",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 566,
+              "column": 4
+            },
+            "end": {
+              "line": 568,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
           "name": "shouldUpdate",
           "description": "Controls whether or not `update` should be called when the element requests\nan update. By default, this method always returns `true`, but this can be\ncustomized to control when to update.\n\n* @param _changedProperties Map of changed properties with old values",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 552,
+              "line": 576,
               "column": 4
             },
             "end": {
-              "line": 554,
+              "line": 578,
               "column": 5
             }
           },
@@ -2317,11 +3202,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 158,
+              "line": 160,
               "column": 4
             },
             "end": {
-              "line": 176,
+              "line": 178,
               "column": 5
             }
           },
@@ -2343,11 +3228,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 581,
+              "line": 605,
               "column": 4
             },
             "end": {
-              "line": 582,
+              "line": 606,
               "column": 5
             }
           },
@@ -2369,11 +3254,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 592,
+              "line": 616,
               "column": 4
             },
             "end": {
-              "line": 593,
+              "line": 617,
               "column": 5
             }
           },
@@ -2395,11 +3280,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 109,
+              "line": 111,
               "column": 4
             },
             "end": {
-              "line": 111,
+              "line": 113,
               "column": 5
             }
           },
@@ -2418,11 +3303,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 121,
+              "line": 123,
               "column": 4
             },
             "end": {
-              "line": 143,
+              "line": 145,
               "column": 5
             }
           },
@@ -2439,11 +3324,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 60,
+              "line": 72,
               "column": 2
             },
             "end": {
-              "line": 63,
+              "line": 75,
               "column": 3
             }
           },
@@ -2462,11 +3347,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 116,
+              "line": 124,
               "column": 4
             },
             "end": {
-              "line": 126,
+              "line": 134,
               "column": 5
             }
           },
@@ -2484,11 +3369,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 134,
+              "line": 142,
               "column": 4
             },
             "end": {
-              "line": 164,
+              "line": 170,
               "column": 5
             }
           },
@@ -2518,7 +3403,7 @@
               "column": 4
             },
             "end": {
-              "line": 55,
+              "line": 57,
               "column": 5
             }
           },
@@ -2536,11 +3421,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 210,
+              "line": 212,
               "column": 4
             },
             "end": {
-              "line": 217,
+              "line": 219,
               "column": 5
             }
           },
@@ -2562,11 +3447,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 224,
+              "line": 226,
               "column": 4
             },
             "end": {
-              "line": 226,
+              "line": 228,
               "column": 5
             }
           },
@@ -2592,11 +3477,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 233,
+              "line": 235,
               "column": 4
             },
             "end": {
-              "line": 238,
+              "line": 240,
               "column": 5
             }
           },
@@ -2618,11 +3503,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 247,
+              "line": 249,
               "column": 4
             },
             "end": {
-              "line": 256,
+              "line": 258,
               "column": 5
             }
           },
@@ -2644,11 +3529,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 57,
+              "line": 59,
               "column": 4
             },
             "end": {
-              "line": 85,
+              "line": 87,
               "column": 5
             }
           },
@@ -2659,22 +3544,22 @@
       ],
       "demos": [
         {
-          "url": "demo/furo-vertical-flex.html",
+          "url": "demo-furo-vertical-flex",
           "description": ""
         },
         {
-          "url": "demo/furo-horizontal-flex.html",
+          "url": "demo-furo-horizontal-flex",
           "description": ""
         }
       ],
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 11,
+          "line": 23,
           "column": 0
         },
         "end": {
-          "line": 65,
+          "line": 77,
           "column": 1
         }
       },
@@ -2687,11 +3572,11 @@
           "description": "Attribute flex for furo-horizontal-flex and furo-vertical-flex",
           "sourceRange": {
             "start": {
-              "line": 24,
+              "line": 36,
               "column": 6
             },
             "end": {
-              "line": 27,
+              "line": 39,
               "column": 7
             }
           },
@@ -2703,11 +3588,11 @@
           "description": "Set to true to hide the spacer",
           "sourceRange": {
             "start": {
-              "line": 31,
+              "line": 43,
               "column": 6
             },
             "end": {
-              "line": 34,
+              "line": 46,
               "column": 7
             }
           },
@@ -2732,6 +3617,420 @@
       "path": "packages/furo-layout/furo-loading-indicator-bar.js",
       "properties": [],
       "methods": [
+        {
+          "name": "_attachDom",
+          "description": "für Polymer",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 48,
+              "column": 8
+            },
+            "end": {
+              "line": 51,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "firstUpdated",
+          "description": "for lit elements",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 54,
+              "column": 8
+            },
+            "end": {
+              "line": 57,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "changedProperties"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTriggerWire",
+          "description": "Triggers a wire",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 65,
+              "column": 8
+            },
+            "end": {
+              "line": 108,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire like --buttonClicked"
+            },
+            {
+              "name": "detailData",
+              "description": "(*) data to pass"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPAddWireHook",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 118,
+              "column": 8
+            },
+            "end": {
+              "line": 135,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire"
+            },
+            {
+              "name": "cb",
+              "description": "(function) Callback function cb(detailData)"
+            },
+            {
+              "name": "before"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTraceWires",
+          "description": "Log all triggered wires for this component. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPTraceWires()`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 144,
+              "column": 8
+            },
+            "end": {
+              "line": 166,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPDebug",
+          "description": "Get information for the triggered wire. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPDebug('--dataReceived')`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 176,
+              "column": 8
+            },
+            "end": {
+              "line": 200,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "openDebugger",
+              "description": "opens the debugger console, so you can inspect your component."
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__toCamelCase",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 202,
+              "column": 8
+            },
+            "end": {
+              "line": 206,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "str"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_appendFBP",
+          "description": "parses the dom for flowbased programming tags",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 213,
+              "column": 8
+            },
+            "end": {
+              "line": 493,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom",
+              "description": "dom node"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__fbpReady",
+          "description": "Livecycle method\nThis method is called, when the wires are ready",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 500,
+              "column": 8
+            },
+            "end": {
+              "line": 502,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__enqueueTrigger",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 503,
+              "column": 8
+            },
+            "end": {
+              "line": 505,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "detailData"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__resolveWireAndPath",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 507,
+              "column": 8
+            },
+            "end": {
+              "line": 515,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "w"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "disconnectedCallback",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 517,
+              "column": 8
+            },
+            "end": {
+              "line": 531,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathGet",
+          "description": "Reads a value from a path.  If any sub-property in the path is `undefined`,\nthis method returns `undefined` (will never throw.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 542,
+              "column": 8
+            },
+            "end": {
+              "line": 555,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to read"
+            }
+          ],
+          "return": {
+            "type": "*",
+            "desc": "Value at path, or `undefined` if the path could not be\n fully dereferenced."
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathSet",
+          "description": "Sets a value to a path.  If any sub-property in the path is `undefined`,\nthis method will no-op.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 566,
+              "column": 8
+            },
+            "end": {
+              "line": 588,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to set"
+            },
+            {
+              "name": "value",
+              "type": "*",
+              "description": "Value to set to path"
+            }
+          ],
+          "return": {
+            "type": "(string | undefined)",
+            "desc": "The normalized version of the input path"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_split",
+          "description": "Splits a path into an array of property names. Accepts either arrays\nof path parts or strings.\n\nExample:\n\n```\nsplit(['foo.bar', 0, 'baz'])  // ['foo', 'bar', '0', 'baz']\nsplit('foo.bar.0.baz')        // ['foo', 'bar', '0', 'baz']\n```",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 606,
+              "column": 8
+            },
+            "end": {
+              "line": 608,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Input path"
+            }
+          ],
+          "return": {
+            "type": "!Array.<string>",
+            "desc": "Array of path parts"
+          },
+          "inheritedFrom": "FBP"
+        },
         {
           "name": "start",
           "description": "",
@@ -2833,6 +4132,420 @@
       "properties": [],
       "methods": [
         {
+          "name": "_attachDom",
+          "description": "für Polymer",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 48,
+              "column": 8
+            },
+            "end": {
+              "line": 51,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "firstUpdated",
+          "description": "for lit elements",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 54,
+              "column": 8
+            },
+            "end": {
+              "line": 57,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "changedProperties"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTriggerWire",
+          "description": "Triggers a wire",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 65,
+              "column": 8
+            },
+            "end": {
+              "line": 108,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire like --buttonClicked"
+            },
+            {
+              "name": "detailData",
+              "description": "(*) data to pass"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPAddWireHook",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 118,
+              "column": 8
+            },
+            "end": {
+              "line": 135,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire",
+              "description": "(String) Name of the wire"
+            },
+            {
+              "name": "cb",
+              "description": "(function) Callback function cb(detailData)"
+            },
+            {
+              "name": "before"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPTraceWires",
+          "description": "Log all triggered wires for this component. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPTraceWires()`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 144,
+              "column": 8
+            },
+            "end": {
+              "line": 166,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_FBPDebug",
+          "description": "Get information for the triggered wire. This function may help you at debugging.\nSelect your element in the dev console and call `$0._FBPDebug('--dataReceived')`",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 176,
+              "column": 8
+            },
+            "end": {
+              "line": 200,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "openDebugger",
+              "description": "opens the debugger console, so you can inspect your component."
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__toCamelCase",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 202,
+              "column": 8
+            },
+            "end": {
+              "line": 206,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "str"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_appendFBP",
+          "description": "parses the dom for flowbased programming tags",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 213,
+              "column": 8
+            },
+            "end": {
+              "line": 493,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dom",
+              "description": "dom node"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__fbpReady",
+          "description": "Livecycle method\nThis method is called, when the wires are ready",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 500,
+              "column": 8
+            },
+            "end": {
+              "line": 502,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__enqueueTrigger",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 503,
+              "column": 8
+            },
+            "end": {
+              "line": 505,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "wire"
+            },
+            {
+              "name": "detailData"
+            }
+          ],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "__resolveWireAndPath",
+          "description": "",
+          "privacy": "private",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 507,
+              "column": 8
+            },
+            "end": {
+              "line": 515,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "w"
+            }
+          ],
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "disconnectedCallback",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 517,
+              "column": 8
+            },
+            "end": {
+              "line": 531,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "return": {
+            "type": "void"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathGet",
+          "description": "Reads a value from a path.  If any sub-property in the path is `undefined`,\nthis method returns `undefined` (will never throw.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 542,
+              "column": 8
+            },
+            "end": {
+              "line": 555,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to read"
+            }
+          ],
+          "return": {
+            "type": "*",
+            "desc": "Value at path, or `undefined` if the path could not be\n fully dereferenced."
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_pathSet",
+          "description": "Sets a value to a path.  If any sub-property in the path is `undefined`,\nthis method will no-op.",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 566,
+              "column": 8
+            },
+            "end": {
+              "line": 588,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "root",
+              "type": "Object",
+              "description": "Object from which to dereference path from"
+            },
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Path to set"
+            },
+            {
+              "name": "value",
+              "type": "*",
+              "description": "Value to set to path"
+            }
+          ],
+          "return": {
+            "type": "(string | undefined)",
+            "desc": "The normalized version of the input path"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
+          "name": "_split",
+          "description": "Splits a path into an array of property names. Accepts either arrays\nof path parts or strings.\n\nExample:\n\n```\nsplit(['foo.bar', 0, 'baz'])  // ['foo', 'bar', '0', 'baz']\nsplit('foo.bar.0.baz')        // ['foo', 'bar', '0', 'baz']\n```",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../@furo/fbp/fbp.js",
+            "start": {
+              "line": 606,
+              "column": 8
+            },
+            "end": {
+              "line": 608,
+              "column": 9
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "path",
+              "type": "(string | !Array.<(string | number)>)",
+              "description": "Input path"
+            }
+          ],
+          "return": {
+            "type": "!Array.<string>",
+            "desc": "Array of path parts"
+          },
+          "inheritedFrom": "FBP"
+        },
+        {
           "name": "render",
           "description": "",
           "privacy": "private",
@@ -2856,7 +4569,7 @@
       "staticMethods": [],
       "demos": [
         {
-          "url": "demo/furo-card.html",
+          "url": "demo-furo-card",
           "description": ""
         }
       ],
@@ -2887,35 +4600,12 @@
       ]
     },
     {
-      "description": "`furo-icon`\n\nto use furo icon you should\nfirst import a svg set of icons and register it to @furo/framework/iconset\n\n\n\n```\nthe set of icons can be defined in a iconSetName.js file which has content like this:\n    export const iconSetName = {\n         \"iconName\":\"<g><path d='M12 xx.... z'></path></g>\",\n         \"left-arrow\":\"<g><path d='M12 xx.... z'></path></g>\"\n         ...\n    };\nthen import the iconset and register it\nimport {iconSetName} from \"./iconSetName\";\nimport {Iconset} from \"@furo/framework/furo.js\";\nIconset.registerIconset( \"iconSetName\", iconSetName);\n```\n\nYou can find some set in ./iconsets/...\n\nafter registering you can use those icons in furo-icon in any other component\n<furo-icon icon=\"iconSetName:iconName\"></furo-icon>\n\nif you have imported an iconset with the name **default**, you can use the icon without set name:\n\n```\n<furo-icon icon=\"iconName\" ></furo-icon>\n```\n\nuse css variable '--furo-icon-width' and '--furo-icon-height' to define the size\nuse '--furo-icon-fill-color' and '--furo-icon-stroke-color'  to define the fill and stroke colors\n\nyou can also define other properties lik viewport ,preserveAspectRatio...",
+      "description": "`furo-icon`\n\nto use furo icon you should\nfirst import a svg set of icons and register it to @furo/framework/iconset\n\n\n\n```js\nthe set of icons can be defined in a iconSetName.js file which has content like this:\n    export const iconSetName = {\n         \"iconName\":\"<g><path d='M12 xx.... z'></path></g>\",\n         \"left-arrow\":\"<g><path d='M12 xx.... z'></path></g>\"\n         ...\n    };\nthen import the iconset and register it\nimport {iconSetName} from \"./iconSetName\";\nimport {Iconset} from \"@furo/framework/furo.js\";\nIconset.registerIconset( \"iconSetName\", iconSetName);\n```\n\nYou can find some set in ./iconsets/...\n\nafter registering you can use those icons in furo-icon in any other component\n\n```html\n<furo-icon icon=\"iconSetName:iconName\"></furo-icon>\n```\n\nif you have imported an iconset with the name **default**, you can use the icon without set name:\n\n```html\n<furo-icon icon=\"iconName\" ></furo-icon>\n```\n\nuse css variable '--furo-icon-width' and '--furo-icon-height' to define the size\nuse '--furo-icon-fill-color' and '--furo-icon-stroke-color'  to define the fill and stroke colors\n\nyou can also define other properties lik viewport ,preserveAspectRatio...",
       "summary": "furo icon",
       "path": "packages/furo-layout/furo-icon.js",
       "properties": [
         {
           "name": "_hasConnected",
-          "type": "?",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "file": "../../../lit-element/lib/updating-element.js",
-            "start": {
-              "line": 469,
-              "column": 4
-            },
-            "end": {
-              "line": 471,
-              "column": 5
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "readOnly": true
-            }
-          },
-          "inheritedFrom": "UpdatingElement"
-        },
-        {
-          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
           "privacy": "protected",
@@ -2938,10 +4628,10 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "hasUpdated",
+          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
-          "privacy": "public",
+          "privacy": "protected",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
@@ -2961,18 +4651,41 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "updateComplete",
-          "type": "Promise",
-          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update. This getter can be implemented to\nawait additional state. For example, it is sometimes useful to await a\nrendered element before fulfilling this Promise. To do this, first await\n`super.updateComplete` then any subsequent state.",
+          "name": "hasUpdated",
+          "type": "?",
+          "description": "",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 542,
+              "line": 478,
               "column": 4
             },
             "end": {
-              "line": 544,
+              "line": 480,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "readOnly": true
+            }
+          },
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
+          "name": "updateComplete",
+          "type": "Promise",
+          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update.\n\nTo await additional asynchronous work, override the `_getUpdateComplete`\nmethod. For example, it is sometimes useful to await a rendered element\nbefore fulfilling this Promise. To do this, first await\n`super._getUpdateComplete()`, then any subsequent state.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 547,
+              "column": 4
+            },
+            "end": {
+              "line": 549,
               "column": 5
             }
           },
@@ -2990,11 +4703,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 96,
+              "line": 100,
               "column": 12
             },
             "end": {
-              "line": 98,
+              "line": 102,
               "column": 13
             }
           },
@@ -3011,11 +4724,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 100,
+              "line": 104,
               "column": 12
             },
             "end": {
-              "line": 103,
+              "line": 107,
               "column": 13
             }
           },
@@ -3032,11 +4745,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 105,
+              "line": 109,
               "column": 12
             },
             "end": {
-              "line": 107,
+              "line": 111,
               "column": 13
             }
           },
@@ -3053,11 +4766,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 109,
+              "line": 113,
               "column": 12
             },
             "end": {
-              "line": 112,
+              "line": 116,
               "column": 13
             }
           },
@@ -3074,11 +4787,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 114,
+              "line": 118,
               "column": 12
             },
             "end": {
-              "line": 116,
+              "line": 120,
               "column": 13
             }
           },
@@ -3097,11 +4810,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 91,
+              "line": 93,
               "column": 4
             },
             "end": {
-              "line": 101,
+              "line": 103,
               "column": 5
             }
           },
@@ -3119,11 +4832,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 278,
+              "line": 281,
               "column": 4
             },
             "end": {
-              "line": 292,
+              "line": 295,
               "column": 5
             }
           },
@@ -3141,11 +4854,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 296,
+              "line": 299,
               "column": 4
             },
             "end": {
-              "line": 302,
+              "line": 305,
               "column": 5
             }
           },
@@ -3163,11 +4876,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 144,
+              "line": 146,
               "column": 4
             },
             "end": {
-              "line": 151,
+              "line": 153,
               "column": 5
             }
           },
@@ -3185,11 +4898,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 319,
+              "line": 322,
               "column": 4
             },
             "end": {
-              "line": 320,
+              "line": 323,
               "column": 5
             }
           },
@@ -3207,11 +4920,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 324,
+              "line": 327,
               "column": 4
             },
             "end": {
-              "line": 328,
+              "line": 331,
               "column": 5
             }
           },
@@ -3239,11 +4952,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 329,
+              "line": 332,
               "column": 4
             },
             "end": {
-              "line": 356,
+              "line": 359,
               "column": 5
             }
           },
@@ -3272,11 +4985,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 357,
+              "line": 360,
               "column": 4
             },
             "end": {
-              "line": 375,
+              "line": 378,
               "column": 5
             }
           },
@@ -3301,11 +5014,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 381,
+              "line": 384,
               "column": 4
             },
             "end": {
-              "line": 411,
+              "line": 414,
               "column": 5
             }
           },
@@ -3330,11 +5043,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 425,
+              "line": 428,
               "column": 4
             },
             "end": {
-              "line": 428,
+              "line": 431,
               "column": 5
             }
           },
@@ -3362,11 +5075,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 432,
+              "line": 435,
               "column": 4
             },
             "end": {
-              "line": 468,
+              "line": 471,
               "column": 5
             }
           },
@@ -3381,11 +5094,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 494,
+              "line": 497,
               "column": 4
             },
             "end": {
-              "line": 524,
+              "line": 527,
               "column": 5
             }
           },
@@ -3403,11 +5116,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 525,
+              "line": 528,
               "column": 4
             },
             "end": {
-              "line": 528,
+              "line": 531,
               "column": 5
             }
           },
@@ -3419,17 +5132,36 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
+          "name": "_getUpdateComplete",
+          "description": "Override point for the `updateComplete` promise.\n\nIt is not safe to override the `updateComplete` getter directly due to a\nlimitation in TypeScript which means it is not possible to call a\nsuperclass getter (e.g. `super.updateComplete.then(...)`) when the target\nlanguage is ES5 (https://github.com/microsoft/TypeScript/issues/338).\nThis method should be overridden instead. For example:\n\n  class MyElement extends LitElement {\n    async _getUpdateComplete() {\n      await super._getUpdateComplete();\n      await this._myChild.updateComplete;\n    }\n  }",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 566,
+              "column": 4
+            },
+            "end": {
+              "line": 568,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
           "name": "shouldUpdate",
           "description": "Controls whether or not `update` should be called when the element requests\nan update. By default, this method always returns `true`, but this can be\ncustomized to control when to update.\n\n* @param _changedProperties Map of changed properties with old values",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 552,
+              "line": 576,
               "column": 4
             },
             "end": {
-              "line": 554,
+              "line": 578,
               "column": 5
             }
           },
@@ -3448,11 +5180,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 158,
+              "line": 160,
               "column": 4
             },
             "end": {
-              "line": 176,
+              "line": 178,
               "column": 5
             }
           },
@@ -3473,11 +5205,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 126,
+              "line": 130,
               "column": 4
             },
             "end": {
-              "line": 144,
+              "line": 148,
               "column": 5
             }
           },
@@ -3498,11 +5230,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 592,
+              "line": 616,
               "column": 4
             },
             "end": {
-              "line": 593,
+              "line": 617,
               "column": 5
             }
           },
@@ -3524,11 +5256,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 109,
+              "line": 111,
               "column": 4
             },
             "end": {
-              "line": 111,
+              "line": 113,
               "column": 5
             }
           },
@@ -3547,11 +5279,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 121,
+              "line": 123,
               "column": 4
             },
             "end": {
-              "line": 143,
+              "line": 145,
               "column": 5
             }
           },
@@ -3568,11 +5300,11 @@
           "privacy": "private",
           "sourceRange": {
             "start": {
-              "line": 151,
+              "line": 155,
               "column": 4
             },
             "end": {
-              "line": 153,
+              "line": 157,
               "column": 5
             }
           },
@@ -3591,11 +5323,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 116,
+              "line": 124,
               "column": 4
             },
             "end": {
-              "line": 126,
+              "line": 134,
               "column": 5
             }
           },
@@ -3613,11 +5345,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 134,
+              "line": 142,
               "column": 4
             },
             "end": {
-              "line": 164,
+              "line": 170,
               "column": 5
             }
           },
@@ -3647,7 +5379,7 @@
               "column": 4
             },
             "end": {
-              "line": 55,
+              "line": 57,
               "column": 5
             }
           },
@@ -3665,11 +5397,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 210,
+              "line": 212,
               "column": 4
             },
             "end": {
-              "line": 217,
+              "line": 219,
               "column": 5
             }
           },
@@ -3691,11 +5423,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 224,
+              "line": 226,
               "column": 4
             },
             "end": {
-              "line": 226,
+              "line": 228,
               "column": 5
             }
           },
@@ -3721,11 +5453,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 233,
+              "line": 235,
               "column": 4
             },
             "end": {
-              "line": 238,
+              "line": 240,
               "column": 5
             }
           },
@@ -3747,11 +5479,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 247,
+              "line": 249,
               "column": 4
             },
             "end": {
-              "line": 256,
+              "line": 258,
               "column": 5
             }
           },
@@ -3773,11 +5505,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 57,
+              "line": 59,
               "column": 4
             },
             "end": {
-              "line": 85,
+              "line": 87,
               "column": 5
             }
           },
@@ -3788,18 +5520,22 @@
       ],
       "demos": [
         {
-          "url": "demo/furo-icon.html",
+          "url": "demo-furo-icon",
+          "description": ""
+        },
+        {
+          "url": "demo-furo-icon-list",
           "description": ""
         }
       ],
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 49,
+          "line": 53,
           "column": 0
         },
         "end": {
-          "line": 155,
+          "line": 159,
           "column": 1
         }
       },
@@ -3812,11 +5548,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 96,
+              "line": 100,
               "column": 12
             },
             "end": {
-              "line": 98,
+              "line": 102,
               "column": 13
             }
           },
@@ -3828,11 +5564,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 100,
+              "line": 104,
               "column": 12
             },
             "end": {
-              "line": 103,
+              "line": 107,
               "column": 13
             }
           },
@@ -3844,11 +5580,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 105,
+              "line": 109,
               "column": 12
             },
             "end": {
-              "line": 107,
+              "line": 111,
               "column": 13
             }
           },
@@ -3860,11 +5596,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 109,
+              "line": 113,
               "column": 12
             },
             "end": {
-              "line": 112,
+              "line": 116,
               "column": 13
             }
           },
@@ -3876,11 +5612,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 114,
+              "line": 118,
               "column": 12
             },
             "end": {
-              "line": 116,
+              "line": 120,
               "column": 13
             }
           },
@@ -3897,35 +5633,12 @@
       "tagname": "furo-icon"
     },
     {
-      "description": "`furo-ripple` gives the ripple effect to a element\n use it directly in an element:\n <button>\n      click here\n     <furo-ripple></furo-ripple>\n </button>\n\n or you can also trigger the ripple effect via wire\n <button @-click=\"--click\" >\n     ...\n     <furo-ripple ƒ-trigger=\"--click\"></furo-ripple>\n </button>\n with variable `--furo-ripple-bg-color` you can modify the backgroud color of the ripple effect\n\nLit element",
+      "description": "`furo-ripple` gives the ripple effect to a element\n\n > Note: Add a `position:relative` to the parent element.\n\n use it directly in an element:\n<furo-demo-snippet source>\n<template>\n<!-- without position relative -->\n <button>\n      click here\n     <furo-ripple></furo-ripple>\n </button>\n</template>\n</furo-demo-snippet>\n\n## trigger the ripple effect via wire\n<furo-demo-snippet source>\n<template>\n<button @-click=\"--actionClicked\">\n      click here\n</button>\n\n<div style=\"position:relative; width:80px;height:80px; border:1px solid black;\">\n  <furo-ripple noink ƒ-trigger=\"--actionClicked\"></furo-ripple>\n  Ripple here\n</div>\n</template>\n</furo-demo-snippet>\n\n\n## style vars\n with variable `--furo-ripple-bg-color` you can modify the backgroud color of the ripple effect",
       "summary": "",
       "path": "packages/furo-layout/furo-ripple.js",
       "properties": [
         {
           "name": "_hasConnected",
-          "type": "?",
-          "description": "",
-          "privacy": "protected",
-          "sourceRange": {
-            "file": "../../../lit-element/lib/updating-element.js",
-            "start": {
-              "line": 469,
-              "column": 4
-            },
-            "end": {
-              "line": 471,
-              "column": 5
-            }
-          },
-          "metadata": {
-            "polymer": {
-              "readOnly": true
-            }
-          },
-          "inheritedFrom": "UpdatingElement"
-        },
-        {
-          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
           "privacy": "protected",
@@ -3948,10 +5661,10 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "hasUpdated",
+          "name": "_hasRequestedUpdate",
           "type": "?",
           "description": "",
-          "privacy": "public",
+          "privacy": "protected",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
@@ -3971,18 +5684,41 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
-          "name": "updateComplete",
-          "type": "Promise",
-          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update. This getter can be implemented to\nawait additional state. For example, it is sometimes useful to await a\nrendered element before fulfilling this Promise. To do this, first await\n`super.updateComplete` then any subsequent state.",
+          "name": "hasUpdated",
+          "type": "?",
+          "description": "",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 542,
+              "line": 478,
               "column": 4
             },
             "end": {
-              "line": 544,
+              "line": 480,
+              "column": 5
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "readOnly": true
+            }
+          },
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
+          "name": "updateComplete",
+          "type": "Promise",
+          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update.\n\nTo await additional asynchronous work, override the `_getUpdateComplete`\nmethod. For example, it is sometimes useful to await a rendered element\nbefore fulfilling this Promise. To do this, first await\n`super._getUpdateComplete()`, then any subsequent state.",
+          "privacy": "public",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 547,
+              "column": 4
+            },
+            "end": {
+              "line": 549,
               "column": 5
             }
           },
@@ -4000,11 +5736,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 95,
+              "line": 112,
               "column": 12
             },
             "end": {
-              "line": 95,
+              "line": 112,
               "column": 49
             }
           },
@@ -4023,11 +5759,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 91,
+              "line": 93,
               "column": 4
             },
             "end": {
-              "line": 101,
+              "line": 103,
               "column": 5
             }
           },
@@ -4045,11 +5781,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 278,
+              "line": 281,
               "column": 4
             },
             "end": {
-              "line": 292,
+              "line": 295,
               "column": 5
             }
           },
@@ -4067,11 +5803,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 296,
+              "line": 299,
               "column": 4
             },
             "end": {
-              "line": 302,
+              "line": 305,
               "column": 5
             }
           },
@@ -4088,11 +5824,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 32,
+              "line": 49,
               "column": 4
             },
             "end": {
-              "line": 38,
+              "line": 55,
               "column": 5
             }
           },
@@ -4109,11 +5845,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 319,
+              "line": 322,
               "column": 4
             },
             "end": {
-              "line": 320,
+              "line": 323,
               "column": 5
             }
           },
@@ -4131,11 +5867,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 324,
+              "line": 327,
               "column": 4
             },
             "end": {
-              "line": 328,
+              "line": 331,
               "column": 5
             }
           },
@@ -4163,11 +5899,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 329,
+              "line": 332,
               "column": 4
             },
             "end": {
-              "line": 356,
+              "line": 359,
               "column": 5
             }
           },
@@ -4196,11 +5932,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 357,
+              "line": 360,
               "column": 4
             },
             "end": {
-              "line": 375,
+              "line": 378,
               "column": 5
             }
           },
@@ -4225,11 +5961,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 381,
+              "line": 384,
               "column": 4
             },
             "end": {
-              "line": 411,
+              "line": 414,
               "column": 5
             }
           },
@@ -4254,11 +5990,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 425,
+              "line": 428,
               "column": 4
             },
             "end": {
-              "line": 428,
+              "line": 431,
               "column": 5
             }
           },
@@ -4286,11 +6022,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 432,
+              "line": 435,
               "column": 4
             },
             "end": {
-              "line": 468,
+              "line": 471,
               "column": 5
             }
           },
@@ -4305,11 +6041,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 494,
+              "line": 497,
               "column": 4
             },
             "end": {
-              "line": 524,
+              "line": 527,
               "column": 5
             }
           },
@@ -4327,11 +6063,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 525,
+              "line": 528,
               "column": 4
             },
             "end": {
-              "line": 528,
+              "line": 531,
               "column": 5
             }
           },
@@ -4343,17 +6079,36 @@
           "inheritedFrom": "UpdatingElement"
         },
         {
+          "name": "_getUpdateComplete",
+          "description": "Override point for the `updateComplete` promise.\n\nIt is not safe to override the `updateComplete` getter directly due to a\nlimitation in TypeScript which means it is not possible to call a\nsuperclass getter (e.g. `super.updateComplete.then(...)`) when the target\nlanguage is ES5 (https://github.com/microsoft/TypeScript/issues/338).\nThis method should be overridden instead. For example:\n\n  class MyElement extends LitElement {\n    async _getUpdateComplete() {\n      await super._getUpdateComplete();\n      await this._myChild.updateComplete;\n    }\n  }",
+          "privacy": "protected",
+          "sourceRange": {
+            "file": "../../../lit-element/lib/updating-element.js",
+            "start": {
+              "line": 566,
+              "column": 4
+            },
+            "end": {
+              "line": 568,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [],
+          "inheritedFrom": "UpdatingElement"
+        },
+        {
           "name": "shouldUpdate",
           "description": "Controls whether or not `update` should be called when the element requests\nan update. By default, this method always returns `true`, but this can be\ncustomized to control when to update.\n\n* @param _changedProperties Map of changed properties with old values",
           "privacy": "public",
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 552,
+              "line": 576,
               "column": 4
             },
             "end": {
-              "line": 554,
+              "line": 578,
               "column": 5
             }
           },
@@ -4372,11 +6127,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 158,
+              "line": 160,
               "column": 4
             },
             "end": {
-              "line": 176,
+              "line": 178,
               "column": 5
             }
           },
@@ -4398,11 +6153,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 581,
+              "line": 605,
               "column": 4
             },
             "end": {
-              "line": 582,
+              "line": 606,
               "column": 5
             }
           },
@@ -4424,11 +6179,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 592,
+              "line": 616,
               "column": 4
             },
             "end": {
-              "line": 593,
+              "line": 617,
               "column": 5
             }
           },
@@ -4450,11 +6205,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 109,
+              "line": 111,
               "column": 4
             },
             "end": {
-              "line": 111,
+              "line": 113,
               "column": 5
             }
           },
@@ -4473,11 +6228,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 121,
+              "line": 123,
               "column": 4
             },
             "end": {
-              "line": 143,
+              "line": 145,
               "column": 5
             }
           },
@@ -4495,11 +6250,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 182,
+              "line": 184,
               "column": 4
             },
             "end": {
-              "line": 183,
+              "line": 185,
               "column": 5
             }
           },
@@ -4516,11 +6271,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 103,
+              "line": 120,
               "column": 4
             },
             "end": {
-              "line": 108,
+              "line": 125,
               "column": 5
             }
           },
@@ -4539,11 +6294,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 116,
+              "line": 124,
               "column": 4
             },
             "end": {
-              "line": 126,
+              "line": 134,
               "column": 5
             }
           },
@@ -4561,11 +6316,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 134,
+              "line": 142,
               "column": 4
             },
             "end": {
-              "line": 164,
+              "line": 170,
               "column": 5
             }
           },
@@ -4595,7 +6350,7 @@
               "column": 4
             },
             "end": {
-              "line": 55,
+              "line": 57,
               "column": 5
             }
           },
@@ -4613,11 +6368,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 210,
+              "line": 212,
               "column": 4
             },
             "end": {
-              "line": 217,
+              "line": 219,
               "column": 5
             }
           },
@@ -4639,11 +6394,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 224,
+              "line": 226,
               "column": 4
             },
             "end": {
-              "line": 226,
+              "line": 228,
               "column": 5
             }
           },
@@ -4669,11 +6424,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 233,
+              "line": 235,
               "column": 4
             },
             "end": {
-              "line": 238,
+              "line": 240,
               "column": 5
             }
           },
@@ -4695,11 +6450,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lib/updating-element.js",
             "start": {
-              "line": 247,
+              "line": 249,
               "column": 4
             },
             "end": {
-              "line": 256,
+              "line": 258,
               "column": 5
             }
           },
@@ -4721,11 +6476,11 @@
           "sourceRange": {
             "file": "../../../lit-element/lit-element.js",
             "start": {
-              "line": 57,
+              "line": 59,
               "column": 4
             },
             "end": {
-              "line": 85,
+              "line": 87,
               "column": 5
             }
           },
@@ -4734,20 +6489,15 @@
           "inheritedFrom": "LitElement"
         }
       ],
-      "demos": [
-        {
-          "url": "demo/furo-button.html",
-          "description": ""
-        }
-      ],
+      "demos": [],
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 23,
+          "line": 40,
           "column": 0
         },
         "end": {
-          "line": 109,
+          "line": 126,
           "column": 1
         }
       },
@@ -4760,11 +6510,11 @@
           "description": "Disables the click, only ripples with `trigger()`",
           "sourceRange": {
             "start": {
-              "line": 95,
+              "line": 112,
               "column": 12
             },
             "end": {
-              "line": 95,
+              "line": 112,
               "column": 49
             }
           },

@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.1](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.20.0...@furo/form@0.20.1) (2019-07-31)
+
+**Note:** Version bump only for package @furo/form
+
+
+
+
+
+# [0.20.0](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.8...@furo/form@0.20.0) (2019-07-30)
+
+
+### Features
+
+* furo-component-page ([37c9078](https://github.com/veith/FuroBaseComponents/commit/37c9078))
+
+
+
+
+
+## [0.19.8](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.7...@furo/form@0.19.8) (2019-07-30)
+
+**Note:** Version bump only for package @furo/form
+
+
+
+
+
+## [0.19.7](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.6...@furo/form@0.19.7) (2019-07-28)
+
+**Note:** Version bump only for package @furo/form
+
+
+
+
+
+## [0.19.6](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.5...@furo/form@0.19.6) (2019-07-28)
+
+
+### Bug Fixes
+
+* imports ([890bf1e](https://github.com/veith/FuroBaseComponents/commit/890bf1e))
+* imports ([a51ec93](https://github.com/veith/FuroBaseComponents/commit/a51ec93))
+
+
+
+
+
+## [0.19.5](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.4...@furo/form@0.19.5) (2019-07-28)
+
+**Note:** Version bump only for package @furo/form
+
+
+
+
+
+## [0.19.4](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.3...@furo/form@0.19.4) (2019-07-25)
+
+**Note:** Version bump only for package @furo/form
+
+
+
+
+
+## [0.19.3](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.2...@furo/form@0.19.3) (2019-07-22)
+
+**Note:** Version bump only for package @furo/form
+
+
+
+
+
+## [0.19.2](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.1...@furo/form@0.19.2) (2019-07-19)
+
+**Note:** Version bump only for package @furo/form
+
+
+
+
+
 ## [0.19.1](https://github.com/veith/FuroBaseComponents/compare/@furo/form@0.19.0...@furo/form@0.19.1) (2019-07-18)
 
 **Note:** Version bump only for package @furo/form

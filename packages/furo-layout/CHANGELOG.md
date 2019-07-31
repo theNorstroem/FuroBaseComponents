@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.28.0...@furo/layout@0.29.0) (2019-07-31)
+
+
+### Features
+
+* furo-component-page element project ([f0ca850](https://github.com/veith/FuroBaseComponents/commit/f0ca850))
+
+
+
+
+
+# [0.28.0](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.27.6...@furo/layout@0.28.0) (2019-07-30)
+
+
+### Features
+
+* furo-component-page ([37c9078](https://github.com/veith/FuroBaseComponents/commit/37c9078))
+
+
+
+
+
+## [0.27.6](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.27.5...@furo/layout@0.27.6) (2019-07-30)
+
+**Note:** Version bump only for package @furo/layout
+
+
+
+
+
+## [0.27.5](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.27.4...@furo/layout@0.27.5) (2019-07-28)
+
+**Note:** Version bump only for package @furo/layout
+
+
+
+
+
+## [0.27.4](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.27.3...@furo/layout@0.27.4) (2019-07-25)
+
+**Note:** Version bump only for package @furo/layout
+
+
+
+
+
+## [0.27.3](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.27.2...@furo/layout@0.27.3) (2019-07-22)
+
+**Note:** Version bump only for package @furo/layout
+
+
+
+
+
+## [0.27.2](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.27.1...@furo/layout@0.27.2) (2019-07-19)
+
+**Note:** Version bump only for package @furo/layout
+
+
+
+
+
 ## [0.27.1](https://github.com/veith/FuroBaseComponents/compare/@furo/layout@0.27.0...@furo/layout@0.27.1) (2019-07-18)
 
 **Note:** Version bump only for package @furo/layout
