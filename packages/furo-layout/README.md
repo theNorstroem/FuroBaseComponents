@@ -16,3 +16,4 @@ Just take a look at the demos and you will get the idea.
 - [furo-split-view](https://components.furo.pro/?t=FuroSplitView) splitted layout
 - [furo-vertical-flex](https://components.furo.pro/?t=FuroVerticalFlex) vertical alignment of stuff
 - [furo-vertical-scroller](https://components.furo.pro/?t=FuroVerticalScroller) vertical scroll
+- [furo-external-content](https://components.furo.pro/?t=FuroExternalContent) embedding another HTML page
