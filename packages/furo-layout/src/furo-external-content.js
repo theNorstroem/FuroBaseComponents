@@ -12,12 +12,17 @@ import {FBP} from "@furo/fbp";
  */
 class FuroExternalContent extends FBP(LitElement) {
 
+  /**
+   * Fired when the html page finished loading.
+   * @event srcloaded
+   */
+
   constructor() {
     super();
     this.src = '';
     this.allow = '';
     this.referrerpolicy = 'no-referrer-when-downgrade';
-    this.sandbox = '';
+    this.sandbox = 'allow-scripts';
   }
 
   /**
@@ -156,6 +161,7 @@ class FuroExternalContent extends FBP(LitElement) {
 
 
   /**
+   * Component template
    * @private
    * @returns {TemplateResult|TemplateResult}
    */
@@ -164,11 +170,10 @@ class FuroExternalContent extends FBP(LitElement) {
     return html`
       <iframe src="${this.src}"
               allow="${this.allow}"
-              <!-- csp="${this.csp}" experimental technology -->
               name="${this.name}"
               referrerpolicy="${this.referrerpolicy}"
               sandbox="${this.sandbox}"
-              @-load="^^src-loaded(*)"></iframe>
+              @-load="^^srcloaded(*)"></iframe>
     `;
   }
 
