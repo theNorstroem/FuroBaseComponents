@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import {FBP} from "@furo/fbp";
+import { FBP } from '@furo/fbp';
 
 /**
  * `furo-external-content`
@@ -11,7 +11,6 @@ import {FBP} from "@furo/fbp";
  * @appliesMixin FBP
  */
 class FuroExternalContent extends FBP(LitElement) {
-
   /**
    * Fired when the html page finished loading.
    * @event srcloaded
@@ -39,7 +38,7 @@ class FuroExternalContent extends FBP(LitElement) {
    *
    * @returns {{src: {reflect: boolean, type: StringConstructor}}}
    */
-  static get properties(){
+  static get properties() {
     return {
       /**
        * The URL of the page to embed. Use a value of about:blank to embed an empty page that conforms to the same-origin policy.
@@ -48,7 +47,7 @@ class FuroExternalContent extends FBP(LitElement) {
        */
       src: {
         type: String,
-        reflect: true
+        reflect: true,
       },
 
       /**
@@ -58,7 +57,7 @@ class FuroExternalContent extends FBP(LitElement) {
        */
       allow: {
         type: String,
-        refelct: true
+        refelct: true,
       },
 
       /**
@@ -77,7 +76,7 @@ class FuroExternalContent extends FBP(LitElement) {
        */
       name: {
         type: String,
-        reflect: true
+        reflect: true,
       },
 
       /**
@@ -93,7 +92,7 @@ class FuroExternalContent extends FBP(LitElement) {
        */
       referrerpolicy: {
         type: String,
-        reflect: true
+        reflect: true,
       },
 
       /**
@@ -116,8 +115,8 @@ class FuroExternalContent extends FBP(LitElement) {
        */
       sandbox: {
         type: String,
-        reflect: true
-      }
+        reflect: true,
+      },
     };
   }
 
@@ -128,13 +127,13 @@ class FuroExternalContent extends FBP(LitElement) {
    * causes about:blank to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
    * @param field
    */
-  bindData (field) {
+  bindData(field) {
     if (field) {
       this._field = field;
 
-      this._field.addEventListener('field-value-changed', ()=>{
-        this.src = this._field._value
-      })
+      this._field.addEventListener('field-value-changed', () => {
+        this.src = this._field._value;
+      });
     }
   }
 
@@ -142,41 +141,44 @@ class FuroExternalContent extends FBP(LitElement) {
     // language=CSS
     return [
       css`
-            :host {
-                display: block;
-            }
-            :host([hidden]){
-                display: none;
-            }
-            iframe {
-              width: 100%;
-              height: 100%;
-              border: none;
-              margin: unset;
-              padding: unset;
-            }
-        `
+        :host {
+          display: block;
+        }
+        :host([hidden]) {
+          display: none;
+        }
+        iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+          margin: unset;
+          padding: unset;
+        }
+      `,
     ];
   }
-
 
   /**
    * Component template
    * @private
    * @returns {TemplateResult|TemplateResult}
    */
-  render(){
+  render() {
     // language=HTML
     return html`
-      <iframe src="${this.src}"
-              allow="${this.allow}"
-              name="${this.name}"
-              referrerpolicy="${this.referrerpolicy}"
-              sandbox="${this.sandbox}"
-              @-load="^^srcloaded(*)"></iframe>
+      <iframe
+        title="${this.title}"
+        aria-label="${this.name}"
+        role="presentation"
+        src="${this.src}"
+        allow="${this.allow}"
+        name="${this.name}"
+        referrerpolicy="${this.referrerpolicy}"
+        sandbox="${this.sandbox}"
+        @-load="^^srcloaded(*)"
+      ></iframe>
     `;
   }
-
 }
 
 window.customElements.define('furo-external-content', FuroExternalContent);
