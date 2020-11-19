@@ -24,9 +24,16 @@ describe('furo-external-content', () => {
   });
 
   it('should be a furo-external-content', done => {
-    // keep this test on top, so you can recognize a wrong asignment
+    // keep this test on top, so you can recognize a wrong assignment
     assert.equal(element.nodeName.toLowerCase(), 'furo-external-content');
     done();
+  });
+
+  it('should fire event if external content is loaded', done => {
+    element.addEventListener('srcloaded', (e)=>{
+      done();
+    })
+    element.src = "https://furo.pro";
   });
 
   // axeReport a11y tests

@@ -20,6 +20,8 @@ class FuroExternalContent extends FBP(LitElement) {
     super();
     this.src = '';
     this.allow = '';
+    this.name = '';
+    this.title = '';
     this.referrerpolicy = 'no-referrer-when-downgrade';
     this.sandbox = 'allow-scripts';
   }
@@ -75,6 +77,14 @@ class FuroExternalContent extends FBP(LitElement) {
        * or <base> elements; the form target attribute of the <input> or <button> elements; or the windowName parameter in the window.open() method.
        */
       name: {
+        type: String,
+        reflect: true,
+      },
+
+      /**
+       * html title attribute
+       */
+      title: {
         type: String,
         reflect: true,
       },
