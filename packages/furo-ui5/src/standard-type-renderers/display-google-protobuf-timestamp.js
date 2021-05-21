@@ -98,7 +98,7 @@ class DisplayGoogleProtobufTimestamp extends LitElement {
 
     if (typeof fieldValue === 'object') {
       // google.protobuf.Timestamp
-      if (fieldValue && fieldValue.seconds > 0){
+      if (fieldValue && fieldValue.seconds > 0) {
         date = new Date(fieldValue.seconds * 1000 + Math.round(fieldValue.nanos / MS_TO_NANOS));
       }
     } else {
