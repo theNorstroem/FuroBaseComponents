@@ -44,11 +44,31 @@ describe('display-google-protobuf-timestamp', () => {
     }, 0);
   });
 
-  it('should show template according to the value of the data', done => {
+  it('should show template according to the value of the data. Empty value', done => {
     Env.locale = 'de';
-    dao.injectRaw({ google_timestamp: '1970-01-01T00:00:00Z' });
+    dao.injectRaw({ google_timestamp: { seconds: 0, nanos: 0 } });
     setTimeout(() => {
-      assert.equal(display._displayValue, '01.01.1970, 01:00:00');
+      assert.equal(display._displayValue, '');
+
+      done();
+    }, 110);
+  });
+
+  it('should show template according to the value of the data.', done => {
+    Env.locale = 'de';
+    dao.injectRaw({ google_timestamp: { seconds: 1621577867, nanos: 600000 } });
+    setTimeout(() => {
+      assert.equal(display._displayValue, '21.05.2021, 08:17:47');
+
+      done();
+    }, 110);
+  });
+
+  it('should handle timestamp string according RFC 3339', done => {
+    Env.locale = 'de';
+    dao.injectRaw({ google_timestamp: '2014-07-30T10:43:17Z' });
+    setTimeout(() => {
+      assert.equal(display._displayValue, '30.07.2014, 12:43:17');
 
       done();
     }, 110);

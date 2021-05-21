@@ -92,6 +92,11 @@ class FormSectionFour extends FBP(LitElement) {
           ƒ-.disabled="--disable"
           ƒ-bind-data="--entity(*.data.furo_data_date_input_google)"
         ></furo-ui5-data-display>
+
+        <furo-ui5-data-display
+          ƒ-.disabled="--disable"
+          ƒ-bind-data="--entity(*.data.google_timestamp)"
+        ></furo-ui5-data-display>
       </furo-form-layouter>
     `;
   }
